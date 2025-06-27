@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>회원가입</title>
+</head>
+<body>
+<h2 align="center">회원가입</h2>
+
+<form>
+<table border="1" cellspacing="0" cellpadding="10" align="center">
+
+  <tr>
+    <td>이름</td>
+    <td><input type="text" name="name"></td>
+  </tr>
+
+  <tr>
+    <td>아이디</td>
+    <td>
+      <input type="text" name="userid">
+      <button type="button">중복확인</button>
+    </td>
+  </tr>
+
+  <tr>
+    <td>비밀번호</td>
+    <td><input type="password" name="password"></td>
+  </tr>
+
+  <tr>
+    <td>비밀번호 확인</td>
+    <td><input type="password" name="confirm_password"></td>
+  </tr>
+
+  <tr>
+    <td>성별</td>
+    <td>
+      <input type="radio" name="gender" value="male">남성
+      <input type="radio" name="gender" value="female">여성
+    </td>
+  </tr>
+
+  <tr>
+    <td>이메일</td>
+    <td>
+      <input type="text" name="email">
+      <select>
+        <option>선택</option>
+        <option>naver.com</option>
+        <option>hanmail.com</option>
+        <option>gmail.com</option>
+        <option>직접입력</option>
+      </select>
+      <button type="button">중복확인</button>
+    </td>
+  </tr>
+
+  <tr>
+    <td>이메일 인증</td>
+    <td>
+      <button type="button">이메일인증</button>
+    </td>
+  </tr>
+
+  <tr>
+    <td>이메일 수신 동의</td>
+    <td>
+      <input type="checkbox" name="email_agree"> 동의함
+      <p style="font-size: small;">
+        수신거부 시 일부 서비스에 제한이 있을 수 있습니다. <br>
+        비밀번호 초기화 메일 수신 등에 반드시 필요한 정보이므로 정확히 입력해주세요.
+      </p>
+    </td>
+  </tr>
+
+  <tr>
+    <td>휴대전화번호</td>
+    <td>
+      <input type="text" name="phone">
+      <button type="button">SMS인증</button>
+    </td>
+  </tr>
+
+  <tr>
+    <td>SMS 수신 동의</td>
+    <td>
+      <input type="checkbox" name="sms_agree"> 동의함
+      <p style="font-size: small;">
+        수신거부 시 일부 서비스에 제한이 있을 수 있습니다.
+      </p>
+    </td>
+  </tr>
+
+  <tr>
+    <td colspan="2" align="center">
+      <button type="submit">회원가입</button>
+    </td>
+  </tr>
+
+</table>
+</form>
+
+</body>
+</html>
