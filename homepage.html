@@ -1,105 +1,136 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
 <head>
-  <meta charset="utf-8">
-  <title>회원가입</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YOLO 메인페이지</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      background-color: #fdfdfd;
+    }
+    header {
+      background-color: #3366cc;
+      color: white;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+    nav {
+      position: relative;
+    }
+    nav button {
+      margin-left: 10px;
+      padding: 8px 12px;
+      background-color: white;
+      color: #3366cc;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      position: relative;
+    }
+    .dropdown {
+      position: absolute;
+      top: 40px;
+      left: 0;
+      display: none;
+      flex-direction: column;
+      background-color: white;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+      z-index: 1000;
+    }
+    .dropdown button {
+      background-color: white;
+      color: #3366cc;
+      border: none;
+      padding: 10px 15px;
+      text-align: left;
+      width: 150px;
+      cursor: pointer;
+    }
+    .dropdown button:hover {
+      background-color: #f0f0f0;
+    }
+    .style-menu:hover .dropdown {
+      display: flex;
+    }
+    .main-section {
+      height: 400px;
+      background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 36px;
+      font-weight: bold;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
+    }
+    .menu-section {
+      display: flex;
+      justify-content: center;
+      margin: 30px 0;
+      gap: 20px;
+    }
+    .menu-section button {
+      padding: 15px 25px;
+      background-color: #3366cc;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .style-menu {
+      display: inline-block;
+      position: relative;
+      margin-top: 10px;
+      text-align: center;
+    }
+    .left-menu-bar {
+      background-color: #eeeeee;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+    }
+    .left-menu-bar span {
+      margin-left: 10px;
+      font-weight: bold;
+      color: #3366cc;
+    }
+  </style>
 </head>
 <body>
-<h2 align="center">회원가입</h2>
+  <header>
+    <div class="logo">✈ YOLO</div>
+    <nav>
+      <button onclick="location.href='../login/login.html'">로그인</button>
+      <button onclick="location.href='../travel_review/travel_review.html'">여행후기</button>
+      <button onclick="location.href='../support/support.html'">고객센터</button>
+      <button onclick="location.href='../mypage/mypage.html'">마이페이지</button>
+    </nav>
+  </header>
 
-<form>
-<table border="1" cellspacing="0" cellpadding="10" align="center">
+  <!-- 전체메뉴 바 추가 -->
+  <div class="left-menu-bar">
+    <button>☰</button>
+    <span>전체메뉴</span>
+  </div>
 
-  <tr>
-    <td>이름</td>
-    <td><input type="text" name="name"></td>
-  </tr>
+  <div class="main-section">
+    당신만의 YOLO 여행을 시작하세요
+  </div>
 
-  <tr>
-    <td>아이디</td>
-    <td>
-      <input type="text" name="userid">
-      <button type="button">중복확인</button>
-    </td>
-  </tr>
-
-  <tr>
-    <td>비밀번호</td>
-    <td><input type="password" name="password"></td>
-  </tr>
-
-  <tr>
-    <td>비밀번호 확인</td>
-    <td><input type="password" name="confirm_password"></td>
-  </tr>
-
-  <tr>
-    <td>성별</td>
-    <td>
-      <input type="radio" name="gender" value="male">남성
-      <input type="radio" name="gender" value="female">여성
-    </td>
-  </tr>
-
-  <tr>
-    <td>이메일</td>
-    <td>
-      <input type="text" name="email">
-      <select>
-        <option>선택</option>
-        <option>naver.com</option>
-        <option>hanmail.com</option>
-        <option>gmail.com</option>
-        <option>직접입력</option>
-      </select>
-      <button type="button">중복확인</button>
-    </td>
-  </tr>
-
-  <tr>
-    <td>이메일 인증</td>
-    <td>
-      <button type="button">이메일인증</button>
-    </td>
-  </tr>
-
-  <tr>
-    <td>이메일 수신 동의</td>
-    <td>
-      <input type="checkbox" name="email_agree"> 동의함
-      <p style="font-size: small;">
-        수신거부 시 일부 서비스에 제한이 있을 수 있습니다. <br>
-        비밀번호 초기화 메일 수신 등에 반드시 필요한 정보이므로 정확히 입력해주세요.
-      </p>
-    </td>
-  </tr>
-
-  <tr>
-    <td>휴대전화번호</td>
-    <td>
-      <input type="text" name="phone">
-      <button type="button">SMS인증</button>
-    </td>
-  </tr>
-
-  <tr>
-    <td>SMS 수신 동의</td>
-    <td>
-      <input type="checkbox" name="sms_agree"> 동의함
-      <p style="font-size: small;">
-        수신거부 시 일부 서비스에 제한이 있을 수 있습니다.
-      </p>
-    </td>
-  </tr>
-
-  <tr>
-    <td colspan="2" align="center">
-      <button type="submit">회원가입</button>
-    </td>
-  </tr>
-
-</table>
-</form>
-
+  <div class="menu-section">
+    <button onclick="location.href='../travel_review/travel_review.html'">여행 둘러보기</button>
+    <button onclick="location.href='../travel_review/travel_review.html'">여행 리뷰</button>
+  </div>
 </body>
 </html>
