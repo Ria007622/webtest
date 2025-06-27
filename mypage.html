@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>YOLO 마이페이지</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(to right, #f8fbff, #e0f0ff);
+      font-family: 'Segoe UI', sans-serif;
+    }
+    .section-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #2563eb;
+      margin-bottom: 0.75rem;
+    }
+    .card {
+      background-color: #ffffff;
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    }
+  </style>
+</head>
+<body>
+  <header class="bg-gradient-to-r from-blue-500 to-blue-700 text-white p-4 shadow-md">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+      <div class="text-2xl font-extrabold">✈ YOLO</div>
+      <nav class="space-x-6 text-lg">
+        <a href="../homepage.html" class="hover:underline">홈</a>
+        <a href="../travel_review.html" class="hover:underline">여행후기</a>
+        <a href="../support.html" class="hover:underline">고객센터</a>
+        <a href="#" class="underline font-semibold">마이페이지</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="max-w-5xl mx-auto py-10 px-4">
+    <div class="text-center mb-10">
+      <h2 class="text-4xl font-extrabold text-blue-600">마이페이지</h2>
+      <p class="text-gray-600 mt-2">여행의 추억과 정보를 한 곳에서 확인해보세요 ✨</p>
+    </div>
+
+    <!-- 사용자 정보 -->
+    <section class="card mb-8">
+      <h3 class="section-title">👤 사용자 정보</h3>
+      <div class="grid sm:grid-cols-2 gap-4">
+        <p><strong>이름:</strong> 최재경</p>
+        <p><strong>이메일:</strong> yolo_user@example.com</p>
+        <p><strong>가입일:</strong> 2024년 6월 1일</p>
+        <p><strong>회원 등급:</strong> 일반회원</p>
+      </div>
+    </section>
+
+    <!-- 내가 작성한 후기 -->
+    <section class="card mb-8">
+      <h3 class="section-title">📝 내가 작성한 후기</h3>
+      <ul class="space-y-2 list-disc list-inside text-gray-700">
+        <li>제주 올레길 정말 평화롭고 좋았어요 🌿 (2024.05.20)</li>
+        <li>도쿄 디즈니랜드에서 가족과 행복한 하루 🎡 (2024.04.12)</li>
+        <li>부산 해운대 바닷바람 맞으며 산책한 힐링 여행 💙 (2024.03.18)</li>
+      </ul>
+    </section>
+
+    <!-- 예약 정보 -->
+    <section class="card mb-8">
+      <h3 class="section-title">📅 나의 여행 일정</h3>
+      <div class="grid sm:grid-cols-2 gap-4 text-gray-700">
+        <div class="bg-blue-50 p-4 rounded">
+          <p><strong>여행지:</strong> 부산</p>
+          <p><strong>기간:</strong> 2024.07.15 ~ 2024.07.17</p>
+          <p><strong>테마:</strong> 힐링 여행</p>
+        </div>
+        <div class="bg-green-50 p-4 rounded">
+          <p><strong>여행지:</strong> 오사카</p>
+          <p><strong>기간:</strong> 2024.08.02 ~ 2024.08.06</p>
+          <p><strong>테마:</strong> 가족 여행</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 즐겨찾기 -->
+    <section class="card mb-8">
+      <h3 class="section-title">⭐ 즐겨찾기한 여행</h3>
+      <ul class="space-y-2 text-gray-700 list-disc list-inside">
+        <li>동유럽 패키지 여행 - 프라하 & 부다페스트</li>
+        <li>제주 한달 살기 프로그램</li>
+        <li>남프랑스 감성 소도시 투어</li>
+      </ul>
+    </section>
+
+    <!-- 회원 탈퇴 / 로그아웃 -->
+    <div class="flex justify-end space-x-4">
+      <button class="bg-red-500 text-white px-5 py-2 rounded hover:bg-red-600">회원 탈퇴</button>
+      <button class="bg-gray-500 text-white px-5 py-2 rounded hover:bg-gray-600">로그아웃</button>
+    </div>
+  </main>
+
+  <footer class="text-center text-gray-500 mt-16 mb-4 text-sm">
+    &copy; 2025 YOLO 여행. All rights reserved.
+  </footer>
+</body>
+</html>
